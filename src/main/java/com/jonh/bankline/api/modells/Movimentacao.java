@@ -2,14 +2,23 @@ package com.jonh.bankline.api.modells;
 
 import java.time.LocalDateTime;
 
+import javax.persistence.Entity;
+import javax.persistence.EnumType;
+import javax.persistence.Enumerated;
+import javax.persistence.Id;
+import javax.persistence.Table;
 
+@Entity
+@Table(name = "tab_movimentacao")
 public class Movimentacao {
-
+    @Id
     private Integer id;
+
     private LocalDateTime dataHora;
     private String descricao;
     private Double valor;
 
+    @Enumerated(EnumType.STRING)
     private MovimentacaoTipo tipo;
 
     public Integer getId() {
