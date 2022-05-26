@@ -2,6 +2,7 @@ package com.jonh.bankline.api.modells;
 
 import java.time.LocalDateTime;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.EnumType;
 import javax.persistence.Enumerated;
@@ -9,7 +10,7 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
-@Table(name = "tab_movimentacao")
+@Table(name = "tb_movimentacao")
 public class Movimentacao {
     @Id
     private Integer id;
@@ -20,7 +21,16 @@ public class Movimentacao {
 
     @Enumerated(EnumType.STRING)
     private MovimentacaoTipo tipo;
+    
+    @Column(name = "id_conta")
+    private Integer idConta;
 
+    public void setIdConta(Integer idConta) {
+        this.idConta = idConta;
+    }
+    public Integer getIdConta() {
+        return idConta;
+    }
     public Integer getId() {
         return id;
     }

@@ -10,7 +10,7 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
-@Table(name = "tab_correntista")
+@Table(name = "tb_correntista")
 public class Correntista {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
