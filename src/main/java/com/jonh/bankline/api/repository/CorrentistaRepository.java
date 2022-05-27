@@ -1,4 +1,4 @@
-package com.jonh.bankline.repository;
+package com.jonh.bankline.api.repository;
 
 import com.jonh.bankline.api.modells.Correntista;
 
