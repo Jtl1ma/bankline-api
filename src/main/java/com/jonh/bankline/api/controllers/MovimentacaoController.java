@@ -20,7 +20,6 @@ public class MovimentacaoController {
 
     @Autowired
     private MovimentacaoRepository movimentacaoRepository;
-
     @Autowired
     private MovimentacaoService service;
 
@@ -30,7 +29,7 @@ public class MovimentacaoController {
     }
     
     @PostMapping
-    public void salve(@RequestBody NovaMovimentacao novaMovimentacao){
+    public void salvar(@RequestBody NovaMovimentacao novaMovimentacao){
         service.save(novaMovimentacao);
     }
 }

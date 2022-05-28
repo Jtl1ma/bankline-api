@@ -20,7 +20,6 @@ public class CorrentistaController {
 
     @Autowired
     private CorrentistaRepository correntistaRepository;
-
     @Autowired
     private CorrentistaService service;
 
